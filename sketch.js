@@ -263,18 +263,102 @@ function draw() {
     
     if (PartidaSel == 1) {
       
-     ref = database.ref('Juegos/CuatroRaya/Partida1CuatroRayaPlayer');
+    ref = database.ref('Juegos/CuatroRaya/Partida2CuatroRayaPlayer');
     ref.set(Jugador);
+      
+    ref = database.ref("Juegos/CuatroRaya/Partida2");
+
+    ref.set(0);
+        
+    ref = database.ref("Juegos/CuatroRaya/Partida2CuatroRayaPlayer");
+
+    ref.set(0);
+        
+    ref = database.ref("Juegos/CuatroRaya/Partida2Fin");
+
+    ref.set(0);
+        
+    ref = database.ref("Juegos/CuatroRaya/Partida2PlayerPos");
+
+    ref.set(0);
+        
+    ref = database.ref("Juegos/CuatroRaya/Partida2Hour");
+
+    ref.set(0);
+        
+    ref = database.ref("Juegos/CuatroRaya/Partida2Min");
+
+    ref.set(0);
+        
+    ref = database.ref("Juegos/CuatroRaya/Partida2Sec");
+
+    ref.set(0);
     
     } else if (PartidaSel == 2) {
       
      ref = database.ref('Juegos/CuatroRaya/Partida2CuatroRayaPlayer');
     ref.set(Jugador);
+      
+    ref = database.ref("Juegos/CuatroRaya/Partida3");
+
+    ref.set(0);
+        
+    ref = database.ref("Juegos/CuatroRaya/Partida3CuatroRayaPlayer");
+
+    ref.set(0);
+        
+    ref = database.ref("Juegos/CuatroRaya/Partida3Fin");
+
+    ref.set(0);
+        
+    ref = database.ref("Juegos/CuatroRaya/Partida3PlayerPos");
+
+    ref.set(0);
+        
+    ref = database.ref("Juegos/CuatroRaya/Partida3Hour");
+
+    ref.set(0);
+        
+    ref = database.ref("Juegos/CuatroRaya/Partida3Min");
+
+    ref.set(0);
+        
+    ref = database.ref("Juegos/CuatroRaya/Partida3Sec");
+
+    ref.set(0);
     
     } else if (PartidaSel == 3) {
       
      ref = database.ref('Juegos/CuatroRaya/Partida3CuatroRayaPlayer');
     ref.set(Jugador);
+      
+    ref = database.ref("Juegos/CuatroRaya/Partida1");
+
+    ref.set(0);
+        
+    ref = database.ref("Juegos/CuatroRaya/Partida1CuatroRayaPlayer");
+
+    ref.set(0);
+        
+    ref = database.ref("Juegos/CuatroRaya/Partida1Fin");
+
+    ref.set(0);
+        
+    ref = database.ref("Juegos/CuatroRaya/Partida1PlayerPos");
+
+    ref.set(0);
+        
+    ref = database.ref("Juegos/CuatroRaya/Partida1Hour");
+
+    ref.set(0);
+        
+    ref = database.ref("Juegos/CuatroRaya/Partida1Min");
+
+    ref.set(0);
+        
+    ref = database.ref("Juegos/CuatroRaya/Partida1Sec");
+
+    ref.set(0);
     
     }
     
@@ -1236,7 +1320,3 @@ function checkDirection(row, col, dRow, dCol) {
   }
   return true;
 }
-
-
-
-
