@@ -163,7 +163,7 @@ function gotDataTimeHour(data) {
 
 
 function setup() {
-  createCanvas(1280, 740); // Resolución de 1280 x 740
+  createCanvas(1280, 720); // Resolución de 1280 x 740
   grid = Array.from({ length: rows }, () => Array(cols).fill(0)); // Inicializa la cuadrícula
   // Centrar el tablero horizontalmente, pero no verticalmente
   offsetX = (width - cols * cellSize) / 2;
