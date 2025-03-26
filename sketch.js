@@ -1,3 +1,4 @@
+let started = false; // Variable de control
 
 var firebaseConfig = {
   apiKey: "AIzaSyDF_0fXUVHiauVr83vsVIqBMkoXjNzRKlY",
@@ -175,6 +176,8 @@ function setup() {
 }
 
 function draw() {
+
+  if (!started) return; // No ejecuta draw() hasta que el usuario haga clic
   
   if (FinJuego == false) {
   
@@ -1319,4 +1322,11 @@ function checkDirection(row, col, dRow, dCol) {
     }
   }
   return true;
+}
+
+function mousePressed() {
+  if (!started) {
+    started = true; // Cambia el estado a iniciado
+    console.log("¡El usuario hizo clic! Iniciando...");
+  }
 }
