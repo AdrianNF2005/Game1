@@ -164,7 +164,13 @@ function gotDataTimeHour(data) {
 
 
 function setup() {
-  createCanvas(1280, 720); // Resolución de 1280 x 740
+
+  createCanvas(1280, 720);
+  
+  let scaleFactor = Math.min(windowWidth / 1280, windowHeight / 720);
+  let canvasElement = document.querySelector("canvas");
+  canvasElement.style.transform = `scale(${scaleFactor})`;
+  
   grid = Array.from({ length: rows }, () => Array(cols).fill(0)); // Inicializa la cuadrícula
   // Centrar el tablero horizontalmente, pero no verticalmente
   offsetX = (width - cols * cellSize) / 2;
@@ -176,8 +182,6 @@ function setup() {
 }
 
 function draw() {
-
-  if (!started) return; // No ejecuta draw() hasta que el usuario haga clic
   
   if (FinJuego == false) {
   
@@ -1324,9 +1328,9 @@ function checkDirection(row, col, dRow, dCol) {
   return true;
 }
 
-function mousePressed() {
-  if (!started) {
-    started = true; // Cambia el estado a iniciado
-    console.log("¡El usuario hizo clic! Iniciando...");
-  }
+function windowResized() {
+  
+  let scaleFactor = Math.min(windowWidth / 1280, windowHeight / 720);
+  let canvasElement = document.querySelector("canvas");
+  canvasElement.style.transform = `scale(${scaleFactor})`;
 }
