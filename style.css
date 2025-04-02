@@ -1,7 +1,18 @@
 html, body {
   margin: 0;
   padding: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: black; /* Barras negras */
+  overflow: hidden;
 }
+
 canvas {
-  display: block;
+  width: 1280px;  /* Tamaño real del canvas */
+  height: 720px;
+  transform-origin: center;
+  transform: scale(calc(Math.min(window.innerWidth / 1280, window.innerHeight / 720)));
 }
